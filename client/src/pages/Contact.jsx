@@ -1,15 +1,15 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useForm } from '@formspree/react';
 
-export const Contact = () => {
-  const defaultFormState = useMemo(() => ({
-    name: '',
-    email: '',
-    phone: '',
-    city: '',
-    message: '',
-  }), []);
+const defaultFormState = {
+  name: '',
+  email: '',
+  phone: '',
+  city: '',
+  message: '',
+}
 
+export const Contact = () => {
   const [state, handleSubmit] = useForm('xoqgkelb');
 
   const [success, setSuccess] = useState('');
